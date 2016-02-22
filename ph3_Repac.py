@@ -120,6 +120,7 @@ def histogramEqualize(imagePath):
 
     #load grayscale
     original = loadImageGrayscale(imagePath)
+    cv2.imwrite('original.bmp',original)
 
     #create histogram
     hist, bins = np.histogram(original.flatten(),256,[0,256])
